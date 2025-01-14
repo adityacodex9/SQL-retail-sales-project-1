@@ -17,8 +17,8 @@ The repository includes:
 ## Project Structure
 
 ## 1.Database Setup
-## Database Creation##:The project starts by creating a database named 'p1_retail_db'.
-## Table Creation##: A table named 'retail_sales' is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+- **Database Creation**: The project starts by creating a database named 'p_retail_db*.
+- **Table Creation**: A table named 'retail_sales' is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
 CREATE DATABASE p1_retail_db;
@@ -135,7 +135,7 @@ from retail_sales
 where category like 'Clothing'
 ```
 
-5**Write a SQL query to find all transactions where the total_sale is between 900 to 1200?**
+5 **Write a SQL query to find all transactions where the total_sale is between 900 to 1200?**
 ```sql
 select 
 * 
@@ -143,7 +143,7 @@ from retail_sales
 where total_sale between 900 and 1200
 ```
 
-6**Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category?**
+6 **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category?**
 ``` sql
 select 
     category,
@@ -156,7 +156,7 @@ GROUP BY
 order by 1
 ```
 
-7**Write a SQL query to calculate the average sale for each month. Find out best selling month in each year?**
+7 **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year?**
 ```sql
 SELECT 
        year,
@@ -175,7 +175,7 @@ GROUP BY 1, 2
 WHERE rank = 1
 ```
 
-8**Write a SQL query to find the top 5 customers based on the highest total sales?**
+8 **Write a SQL query to find the top 5 customers based on the highest total sales?**
 ``` sql
 select
    customer_id,
@@ -186,7 +186,7 @@ order by 2 desc
 limit 5
 ```
 
-9**Write a SQL query to find the number of unique customers who purchased items from each category?**
+9 **Write a SQL query to find the number of unique customers who purchased items from each category?**
 ```sql
 select
    category,
@@ -195,7 +195,7 @@ from retail_sales
 group by category;
 ```
 
-10**Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)?**
+10 **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)?**
 ``` sql
 with hourly_sale
 AS
